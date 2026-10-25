@@ -1,0 +1,60 @@
+.follow-button {
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.follow-button:hover {
+  background: var(--brand-hover);
+}
+
+.person-details strong {
+  display: block;
+  overflow: hidden;
+  color: var(--text-strong);
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.people-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.person-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.person-details {
+  min-width: 0;
+  flex: 1;
+}
+
+.person-details strong {
+  font-size: 11px;
+}
+
+.person-details span {
+  display: block;
+  overflow: hidden;
+  margin-top: 3px;
+  color: var(--text-faint);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.follow-button {
+  min-width: 62px;
+  padding: 6px 9px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--brand);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 600;
+  cursor: default;
+}

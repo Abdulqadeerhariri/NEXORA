@@ -1,0 +1,241 @@
+.notifications-main {
+  display: block;
+  max-width: 1500px;
+  padding: 18px 24px 36px;
+}
+
+.notifications-page {
+  width: 100%;
+  min-width: 0;
+}
+
+.notifications-page > h1 {
+  margin: 0 0 13px;
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.35px;
+}
+
+.notifications-card {
+  padding: 0 13px;
+}
+
+.notification-filters {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 37px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.notification-filter {
+  position: relative;
+  min-height: 30px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-control);
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.notification-filter:hover {
+  background: var(--surface-muted);
+  color: var(--brand);
+}
+
+.notification-filter.active {
+  background: var(--brand);
+  color: var(--white);
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-row {
+  position: relative;
+  display: grid;
+  min-height: 54px;
+  grid-template-columns: 19px 28px minmax(0, 1fr) 44px 44px 19px;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.notification-row:last-child {
+  border-bottom: 0;
+}
+
+.notification-row.is-unread {
+  background: linear-gradient(90deg, rgb(239 246 255 / 55%), transparent 62%);
+}
+
+.notification-type-icon {
+  display: grid;
+  width: 16px;
+  height: 16px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--white);
+}
+
+.notification-type-icon.pink {
+  background: #F43F72;
+}
+
+.notification-type-icon.blue {
+  background: #1684F8;
+}
+
+.notification-type-icon.green {
+  background: #10B981;
+}
+
+.notification-type-icon.purple {
+  background: #7C3AED;
+}
+
+.notification-type-icon .notification-mention-icon {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.notification-avatar {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.notification-message {
+  min-width: 0;
+}
+
+.notification-message p {
+  overflow: hidden;
+  margin: 0;
+  color: var(--text-control);
+  font-size: 9px;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notification-message strong {
+  color: var(--text-body);
+  font-weight: 600;
+}
+
+.notification-message > span {
+  display: block;
+  overflow: hidden;
+  margin-top: 3px;
+  color: var(--text-faint);
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notification-time {
+  color: var(--text-faint);
+  font-size: 8px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.notification-thumbnail {
+  width: 42px;
+  height: 30px;
+  border-radius: var(--radius-xs);
+  background: var(--input-bg);
+  object-fit: cover;
+}
+
+.notification-more {
+  display: grid;
+  width: 20px;
+  height: 24px;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--text-faint);
+  cursor: pointer;
+}
+
+.notification-more:hover {
+  color: var(--brand);
+}
+
+.notification-unread-dot {
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brand);
+  transform: translateY(-50%);
+}
+
+.notification-empty {
+  margin: 0;
+  padding: 30px 12px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 820px) {
+  .notifications-main {
+    max-width: 720px;
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 560px) {
+  .notifications-main {
+    padding: 14px 12px 24px;
+  }
+
+  .notifications-card {
+    padding: 0 9px;
+  }
+
+  .notification-filters {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .notification-filter {
+    padding: 0 7px;
+    font-size: 9px;
+  }
+
+  .notification-row {
+    min-height: 58px;
+    grid-template-columns: 17px 27px minmax(0, 1fr) 35px 17px;
+    gap: 6px;
+  }
+
+  .notification-thumbnail {
+    display: none;
+  }
+
+  .notification-time {
+    font-size: 7px;
+  }
+
+  .notification-message p {
+    font-size: 8px;
+  }
+
+  .notification-message > span {
+    font-size: 7px;
+  }
+}

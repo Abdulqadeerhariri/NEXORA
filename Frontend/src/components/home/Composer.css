@@ -1,0 +1,94 @@
+.composer-option svg {
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.composer {
+  padding: 13px 14px 12px;
+}
+
+.composer-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.composer-prompt {
+  display: flex;
+  height: 40px;
+  flex: 1;
+  align-items: center;
+  padding: 0 13px;
+  border-radius: var(--radius-md);
+  background: var(--surface-muted);
+  color: var(--text-faint);
+}
+
+.composer-bottom {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: var(--space-3);
+  padding-top: 11px;
+  border-top: 1px solid var(--border-light);
+}
+
+.composer-option {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-control);
+  cursor: default;
+}
+
+.post-button {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-control);
+  cursor: default;
+}
+
+.composer-option {
+  padding: 0 10px;
+}
+
+.composer-option:hover {
+  background: var(--surface-muted);
+  color: var(--brand);
+}
+
+.composer-option:first-child svg {
+  color: var(--success);
+}
+
+.composer-option:nth-child(2) svg {
+  color: var(--brand);
+}
+
+.post-button {
+  min-width: 76px;
+  margin-left: auto;
+  background: var(--brand);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.post-button:hover {
+  background: var(--brand-hover);
+}
+
+@media (max-width: 560px) {
+  .composer {
+    padding: 11px;
+  }
+}
