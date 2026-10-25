@@ -8,8 +8,17 @@ import Settings from './pages/Settings/Settings.jsx'
 import Explore from './pages/Explore/Explore.jsx'
 import Notifications from './pages/Notifications/Notifications.jsx'
 import Saved from './pages/Saved/Saved.jsx'
+import AuthPage from './pages/Auth/AuthPage.jsx'
 
 function App() {
+  const authPages = {
+    '/login': 'Login',
+    '/signup': 'Sign Up',
+    '/register': 'Sign Up',
+    '/forgot-password': 'Forgot Password',
+    '/verify-email': 'Email Verification',
+  }
+  const authPage = authPages[window.location.pathname]
   const activePage = {
     '/videos': 'Videos',
     '/profile': 'Profile',
@@ -20,8 +29,12 @@ function App() {
   }[window.location.pathname] ?? 'Home'
 
   useEffect(() => {
-    document.title = `NEXORA | ${activePage}`
-  }, [activePage])
+    document.title = `NEXORA | ${authPage ?? activePage}`
+  }, [activePage, authPage])
+
+  if (authPage) {
+    return <AuthPage page={authPage} />
+  }
 
   return (
     <div className="app-shell">
